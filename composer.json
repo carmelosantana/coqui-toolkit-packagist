@@ -1,0 +1,60 @@
+{
+    "name": "coquibot/coqui-toolkit-packagist",
+    "description": "Packagist package discovery toolkit for Coqui — search, evaluate, and audit PHP packages",
+    "version": "0.1.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carmelo Santana"
+        }
+    ],
+    "keywords": [
+        "php-agents",
+        "coqui",
+        "packagist",
+        "toolkit",
+        "package-discovery"
+    ],
+    "require": {
+        "php": "^8.4",
+        "ext-json": "*",
+        "carmelosantana/php-agents": "^0.4 || @dev",
+        "symfony/http-client": "^7.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\Packagist\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\Packagist\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse"
+    },
+    "extra": {
+        "php-agents": {
+            "toolkits": [
+                "CoquiBot\\Toolkits\\Packagist\\PackagistToolkit"
+            ],
+            "description": "Packagist package search, evaluation, and security advisory lookup"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
