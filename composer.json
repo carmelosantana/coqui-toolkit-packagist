@@ -18,10 +18,10 @@
     "require": {
         "php": "^8.4",
         "ext-json": "*",
-        "symfony/http-client": "^7.0"
+        "symfony/http-client": "^7.0 || ^8.0"
     },
     "require-dev": {
-        "carmelosantana/php-agents": "^0.7",
+        "carmelosantana/php-agents": "^0.10",
         "pestphp/pest": "^3.0",
         "phpstan/phpstan": "^2.0"
     },
